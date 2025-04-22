@@ -1,32 +1,15 @@
-<!-- /challenges/challenge1.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge 1: Basic XSS</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <title>XSS Challenges</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Challenge 1: Basic XSS</h1>
-        <p>Enter your name below. If you succeed, an alert will pop up with the message.</p>
-    </header>
-
-    <section class="form-section">
-        <form method="GET">
-            <label for="name">Your name: </label>
-            <input type="text" name="name" id="name">
-            <button type="submit">Submit</button>
-        </form>
-
-        <div>
-            <p>Hello, <?php echo $_GET['name']; ?>!</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>Created by Chamozuke. All rights reserved.</p>
-    </footer>
+  <h1>💀 XSS Challenges 💀</h1>
+  <ul>
+    <li><a href="challenge-01-basic-reflected/index.html">Challenge 01: Basic Reflected XSS</a></li>
+    <li><a href="challenge-02-url-parameter-xss/index.html">Challenge 02: URL Parameter XSS</a></li>
+  </ul>
 </body>
 </html>
+

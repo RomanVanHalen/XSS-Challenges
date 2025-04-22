@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Challenge 01 - Reflected XSS</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Reflected XSS</h1>
+  <form action="" method="GET">
+    <input type="text" name="name" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+  </form>
+  <p>Hello, <span id="output"></span></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    if(name) {
+      document.getElementById("output").innerHTML = name;
+    }
+  </script>
+</body>
+</html>

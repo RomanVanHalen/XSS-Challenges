@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Challenge 02 - URL Parameter XSS</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>XSS via URL Parameters</h1>
+  <p>Try appending <code>?message=yourmessage</code> to the URL</p>
+  <p>Your message: <span id="message"></span></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const msg = params.get("message");
+    if(msg) {
+      document.getElementById("message").innerHTML = msg;
+    }
+  </script>
+</body>
+</html>
