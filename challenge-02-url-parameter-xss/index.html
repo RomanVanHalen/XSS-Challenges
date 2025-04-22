@@ -9,6 +9,11 @@
   <p>Try appending <code>?message=yourmessage</code> to the URL</p>
   <p>Your message: <span id="message"></span></p>
 
+  <!-- Hidden flag revealed only through successful XSS -->
+  <div id="flag" style="display: none; color: green; font-weight: bold;">
+    FLAG{7f2a91bc-9e7d-4e3a-a3c9-1102xss007}
+  </div>
+
   <script>
     const params = new URLSearchParams(window.location.search);
     const msg = params.get("message");
