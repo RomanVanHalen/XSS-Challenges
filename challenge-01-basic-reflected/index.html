@@ -15,8 +15,17 @@
   <script>
     const params = new URLSearchParams(window.location.search);
     const name = params.get("name");
-    if(name) {
+
+    if (name) {
+      // Reflect the 'name' parameter to the page
       document.getElementById("output").innerHTML = name;
+      
+      // Check if the reflected name contains the XSS payload
+      if(name.includes("<script>") || name.includes("<img")) {
+        // Retrieve the flag
+        var flag = "FLAG{d1a6b345-1234-5678-abcd-9876xyz}";
+        alert("Flag: " + flag);
+      }
     }
   </script>
 </body>
